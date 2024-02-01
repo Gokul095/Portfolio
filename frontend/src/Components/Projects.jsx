@@ -25,7 +25,7 @@ const Projects = () => {
     },
     {
       img:portfolioImg ,
-      link:'#' ,
+      link:'https://github.com/Gokul095/Portfolio.git' ,
       titleName: "My Portfolio",
       content: "Designed and developed a personal portfolio website to showcase my skills, projects, and achievements. The website serves as an interactive and informative platform for potential employers and collaborators.",
       programs: 
