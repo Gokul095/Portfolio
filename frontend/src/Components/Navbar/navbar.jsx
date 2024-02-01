@@ -70,7 +70,7 @@ const NavComp = ({ handleDownloadCv }) => {
               className="mobileToggle"
               onChange={handleChange}
             >
-              <ToggleButton id="modeBtn" variant="" className="modeToggle">
+              <ToggleButton id="mobileModeBtn" variant="" className="modeToggle">
                 {" "}
                 {mode === "dark" ? (
                   <MdOutlineLightMode />

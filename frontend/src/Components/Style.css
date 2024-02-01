@@ -135,3 +135,25 @@
 #project .card {
     height: 100% !important;
 }
+
+/* Contact  */
+
+.formError {
+    width: 100%;
+    margin: 20px 0px;
+    padding: 20px 0px;
+    background-color: transparent !important;
+    border: 2px solid rgba(var(--bs-danger-rgb), var(--bs-bg-opacity)) !important;
+    color: rgba(var(--bs-danger-rgb), var(--bs-bg-opacity)) !important;
+
+}
+
+.formSucc {
+    width: 100%;
+    margin: 20px 0px;
+    padding: 20px 0px;
+    background-color: transparent !important;
+    border: 2px solid rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important;
+    color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important;
+
+}

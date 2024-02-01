@@ -1,51 +1,55 @@
 import React, {useState} from 'react'
-import { Button, Card, CardBody, CardTitle, Col, Container, Form, Row } from 'react-bootstrap'
+import { Badge, Button, Card, CardBody, CardTitle, Col, Container, Form, Row } from 'react-bootstrap'
+import * as formik from 'formik';
+import * as yup from 'yup';
 
 const Contact = () => {
 
+  const { Formik } = formik;
+
+  const schema = yup.object().shape({
+    name: yup.string().required('Name is required'),
+    email: yup.string().email('Invalid email address').required('Email is required'),
+    subject: yup.string().required('Subject is required'),
+    message: yup.string().required('Message is required'),
+  });
+
   const [validated, setValidated] = useState(false);
 
-  const handleSubmit = (event) => {
+  const formValidated = (event) => {
     const form = event.currentTarget;
-    console.log(form)
     if (form.checkValidity() === false) {
       event.preventDefault();
-      // event.stopPropagation();
+      event.stopPropagation();
     }
 
     setValidated(true);
   };
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
   
-  const baseUrl ="https://portfolio-v8e5.onrender.com";
+  const baseUrl = 'http://localhost:8000';
+  // const baseUrl = 'https://portfolio-v8e5.onrender.com';
 
-  const sendEmail = async () => {
-    const dataSend ={
-      name: name,
-      email: email,
-      subject: subject,
-      message: message,
-    };
+  const sendEmail = async (values) => {
+    try {
+      const res = await fetch(`${baseUrl}/email/sendEmail`, {
+        method: 'POST',
+        body: JSON.stringify(values),
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+      });
 
-    const res =await fetch (`${baseUrl}/email/sendEmail`, {
-      method: "POST",
-      body: JSON.stringify(dataSend),
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json"
-      },
-    }).then((res) => {
-      console.log(res);
-      if (res.status > 199 && res.status < 300) {
-        alert("Send Successfully !");
+      if (res.status >= 200 && res.status < 300) {
+        alert('Send Successfully!');
+      } else {
+        alert('Failed to send. Please try again.');
       }
-    });
-
-  }
+    } catch (error) {
+      console.error('Error sending email:', error);
+    }
+  };
 
 
 
@@ -58,35 +62,57 @@ const Contact = () => {
               <CardTitle as="h2">Contact</CardTitle>
             </CardBody>
           </Card>
-          <Col xs={12} md={8} className=''>
-            <Form noValidate validated={validated} onSubmit={handleSubmit}>
-               <Row className="mb-3">
-                 <Form.Group as={Col} controlId="formGridName">
-                   <Form.Label>Name</Form.Label>
-                   <Form.Control type="text" onChange={(e) => setName(e.target.value)} placeholder="Enter name" required/>
-                 </Form.Group>
-   
-                 <Form.Group as={Col} controlId="formGridEmail">
-                   <Form.Label>Email</Form.Label>
-                   <Form.Control type="email" onChange={(e) => setEmail(e.target.value)} placeholder="Enter email" required/>
-                 </Form.Group>
-               </Row>
-               <Row className="mb-3">
-                 <Form.Group as={Col} controlId="formGridSubject">
-                   <Form.Label>Subject</Form.Label>
-                   <Form.Control type="text" onChange={(e) => setSubject(e.target.value)} placeholder="Enter Subject" required/>
-                 </Form.Group>
-               </Row>
-               <Row className="mb-3">
-                 <Form.Group className="mb-3" controlId="formGridMessage">
-                   <Form.Label>Message</Form.Label>
-                   <Form.Control as="textarea" onChange={(e) => setMessage(e.target.value)} rows={3} placeholder='Enter Message' required/>
-                 </Form.Group>
-               </Row>
-               <Button type="submit" onClick={() => sendEmail()} className="btn-cutom-color">
-                 Submit
-               </Button>
-            </Form>
+          <Col xs={12} md={8}>
+            {/* <Badge id='formError' bg='danger' className=''></Badge> */}
+            <Formik
+              validationSchema={schema}
+              onSubmit={ (values, {resetForm}) => {
+                sendEmail(values);
+                console.log(values);
+                resetForm({ values: "" });
+              }}
+              initialValues={{
+                name: '',
+                email: '',
+                subject: '',
+                message: '',
+              }}
+            >
+             {({ handleSubmit, handleChange, values, touched, errors }) => (
+              <Form noValidate validated={touched && validated}  onSubmit={handleSubmit}>
+                <Row className='mb-3'>
+                <Form.Group as={Col} controlId='formGridName'>
+                  <Form.Label>Name</Form.Label>
+                  <Form.Control type='text' name='name' value={values.name} onChange={handleChange} placeholder='Enter name' isInvalid={touched.name && errors.name} required />
+                  <Form.Control.Feedback type='invalid'>{errors.name}</Form.Control.Feedback>
+                </Form.Group>
+
+                <Form.Group as={Col} controlId='formGridEmail'>
+                  <Form.Label>Email</Form.Label>
+                  <Form.Control type='email' name='email' value={values.email} onChange={handleChange} placeholder='Enter email'  isInvalid={touched.email && errors.email} required />
+                  <Form.Control.Feedback type='invalid'>{errors.email}</Form.Control.Feedback>
+                </Form.Group>
+                </Row>
+                <Row className='mb-3'>
+                <Form.Group as={Col} controlId='formGridSubject'>
+                  <Form.Label>Subject</Form.Label>
+                  <Form.Control type='text' name='subject' value={values.subject} onChange={handleChange} placeholder='Enter Subject' isInvalid={touched.subject && errors.subject} required />
+                  <Form.Control.Feedback type='invalid'>{errors.subject}</Form.Control.Feedback>
+                </Form.Group>
+                </Row>
+                <Row className='mb-3'>
+                <Form.Group className='mb-3' controlId='formGridMessage'>
+                  <Form.Label>Message</Form.Label>
+                  <Form.Control as='textarea' name='message' value={values.message} onChange={handleChange} rows={3} placeholder='Enter Message' isInvalid={touched.message && errors.message} required />
+                  <Form.Control.Feedback type='invalid'>{errors.message}</Form.Control.Feedback>
+                </Form.Group>
+                </Row>
+                <Button type='submit' className='btn-cutom-color'>
+                Submit
+                </Button>
+              </Form>
+              )}
+            </Formik>
           </Col>
         </Row>
       </Container>

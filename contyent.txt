@@ -1,0 +1,150 @@
+import React, { useEffect, useState } from 'react';
+import { Badge, Button, Card, CardBody, CardTitle, Col, Container, Form, Row, InputGroup  } from 'react-bootstrap';
+import * as formik from 'formik';
+import * as yup from 'yup';
+
+
+const Contact = () => {
+
+  const { Formik } = formik;
+
+  const schema = yup.object().shape({
+    name: yup.string().required(),
+    email: yup.string().required(),
+    subject: yup.string().required(),
+    message: yup.string().required(),
+  });
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+  const [isValid, setIsValid] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
+  const baseUrl = 'http://localhost:8000';
+  // const baseUrl = 'https://portfolio-v8e5.onrender.com';
+
+  useEffect(() => {
+    if (formSubmitted) {
+      // Reset form data after successful submission
+      setTimeout(() => {
+        setName('');
+        setEmail('');
+        setSubject('');
+        setMessage('');
+        setIsValid(false);
+        setFormSubmitted(false);
+      }, 0);
+    }
+  }, [formSubmitted]);
+
+  const validateForm = () => {
+    // Implement your validation logic here
+    const isValidForm = name.trim() !== '' && email.trim() !== '' && subject.trim() !== '' && message.trim() !== '';
+    setIsValid(isValidForm);
+    return isValidForm;
+  };
+
+  const sendEmail = async (e) => {
+    e.preventDefault();
+    const formError = document.getElementById('formError');
+
+    if (!validateForm()) {
+      formError.innerText = 'Please fill in all the details before submitting.';
+      formError.className = 'badge formError bg-danger';
+      return;
+    } else {
+      formError.innerText = 'Mail Submitted Successfully!';
+      formError.className = 'badge formSucc bg-success';
+    }
+
+    const dataSend = {
+      name: name,
+      email: email,
+      subject: subject,
+      message: message,
+    };
+
+    const res = await fetch(`${baseUrl}/email/sendEmail`, {
+      method: 'POST',
+      body: JSON.stringify(dataSend),
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+    }).then((res) => {
+      console.log(res);
+      if (res.status > 199 && res.status < 300) {
+        formError.innerText = 'Mail Submitted Successfully!';
+        formError.className = 'badge formSucc bg-success';
+        alert('Send Successfully!');
+        // Reset form data after successful submission
+        setFormSubmitted(true);
+      }
+    });
+  };
+
+  return (
+    <div id='contact' className='pb-5 mb-5'>
+      <Container>
+        <Row className='justify-content-center'>
+          <Card className='border-none py-3'>
+            <CardBody className='text-center'>
+              <CardTitle as='h2'>Contact</CardTitle>
+            </CardBody>
+          </Card>
+          <Col xs={12} md={8} className=''>
+            <Badge id='formError' bg='danger' className=''></Badge>
+            <Formik
+              validationSchema={schema}
+              onSubmit={console.log()}
+              initialValues={{
+                name: '',
+                email: '',
+                subject: '',
+                message: '',
+              }}
+            >
+             {({ handleSubmit, handleChange, values, touched, errors, resetForm }) => (
+              <Form noValidate  onSubmit={handleSubmit}>
+                <Row className='mb-3'>
+                <Form.Group as={Col} controlId='formGridName'>
+                  <Form.Label>Name</Form.Label>
+                  <Form.Control type='text' name='name' value={values.name} onChange={handleChange} placeholder='Enter name' required />
+                </Form.Group>
+
+                <Form.Group as={Col} controlId='formGridEmail'>
+                  <Form.Label>Email</Form.Label>
+                  <Form.Control type='email' name='email' value={values.email} onChange={handleChange} placeholder='Enter email' required />
+                </Form.Group>
+                </Row>
+                <Row className='mb-3'>
+                <Form.Group as={Col} controlId='formGridSubject'>
+                  <Form.Label>Subject</Form.Label>
+                  <Form.Control type='text' name='subject' value={values.subject} onChange={handleChange} placeholder='Enter Subject' required />
+                </Form.Group>
+                </Row>
+                <Row className='mb-3'>
+                <Form.Group className='mb-3' controlId='formGridMessage'>
+                  <Form.Label>Message</Form.Label>
+                  <Form.Control as='textarea' name='message' value={values.message} onChange={handleChange} rows={3} placeholder='Enter Message' required />
+                </Form.Group>
+                </Row>
+                <Button type='submit' onClick={(e) => sendEmail(e)} className='btn-cutom-color'>
+                Submit
+                </Button>
+              </Form>
+              )}
+            </Formik>
+          </Col>
+        </Row>
+      </Container>
+    </div>
+  );
+};
+
+export default Contact;
+
+
+
