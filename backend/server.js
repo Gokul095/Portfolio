@@ -19,6 +19,11 @@ app.use(express.json()); // tell the server to accept the json data from fronten
 //Signup and login
 app.use("/email", emailRoutes);
 
+app.get("/", (req, res) => {
+    res.send("Hello World!");
+});
+
+
 const PORT = process.env.PORT;
 app.listen(PORT, () => {
     console.log(`Example app listening on port ${PORT}`);
