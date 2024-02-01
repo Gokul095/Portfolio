@@ -46,7 +46,7 @@
     position: absolute;
     color: #c9f31d;
     width: 0px;
-    height: -webkit-fill-available;
+    height: 100%;
     overflow: hidden;
     animation: pulse-width 5s ease-in infinite;
     -webkit-text-stroke-width: 1px;
