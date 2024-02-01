@@ -7,9 +7,10 @@ const Contact = () => {
 
   const handleSubmit = (event) => {
     const form = event.currentTarget;
+    console.log(form)
     if (form.checkValidity() === false) {
       event.preventDefault();
-      event.stopPropagation();
+      // event.stopPropagation();
     }
 
     setValidated(true);

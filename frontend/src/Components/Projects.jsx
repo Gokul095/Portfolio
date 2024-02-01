@@ -118,8 +118,8 @@ const Projects = () => {
             </CardBody>
           </Card>
             {liveProjectData.map((liveProject, index) => (
-              <Col xs={12} md={4} className='py-5'>
-                <Card key={index}>
+              <Col xs={12} md={4} className='py-5' key={index}>
+                <Card>
                   <CardImg variant='top' src={liveProject.img} alt={liveProject.name}></CardImg>
                   <CardHeader className='text-center py-3'>
                     <Button href={liveProject.url} className='btn-cutom-color' target='blank'>View Website</Button>
