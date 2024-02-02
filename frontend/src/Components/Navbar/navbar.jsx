@@ -51,7 +51,7 @@ const NavComp = ({ handleDownloadCv }) => {
 
   return (
     <header className="header-section">
-      <Navbar expand="lg" className={`bg-body-tertiary ${scrolled ? "menu-fixed" : ""}`} bg={mode} data-bs-theme={mode} >
+      <Navbar collapseOnSelect  expand="lg" className={`bg-body-tertiary ${scrolled ? "menu-fixed" : ""}`} bg={mode} data-bs-theme={mode} >
         <Container>
           <div className="d-flex align-items-center">
             <Navbar.Brand as={Link} to={"/"}>
@@ -81,16 +81,15 @@ const NavComp = ({ handleDownloadCv }) => {
             </ToggleButtonGroup>
           </div>
 
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse
-            id="basic-navbar-nav"
-            className="justify-content-end"
-          >
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
             <Nav>
-              {/* <Nav.Link as={Link} to={"/"}>Home</Nav.Link>
-              <Nav.Link as={Link} to={"/#about"}>About</Nav.Link>
-              <Nav.Link as={Link} to={"/#contact"}>Contact Us</Nav.Link> */}
-              <a className="nav-link" href="#home">
+              <Nav.Link href="#home" >Home</Nav.Link>
+              <Nav.Link href="#about" >About</Nav.Link>
+              <Nav.Link href="#skill" >Skills</Nav.Link>
+              <Nav.Link href="#project" >Projects</Nav.Link>
+              <Nav.Link href="#contact" >Contact Us</Nav.Link>
+              {/* <a className="nav-link" href="#home">
                 Home
               </a>
               <a className="nav-link" href="#about">
@@ -104,7 +103,7 @@ const NavComp = ({ handleDownloadCv }) => {
               </a>
               <a className="nav-link" href="#contact">
                 Contact Us
-              </a>
+              </a> */}
               <Button
                 className="btn-cutom-color"
                 variant=" "
@@ -131,6 +130,7 @@ const NavComp = ({ handleDownloadCv }) => {
           </ToggleButtonGroup>
         </Container>
       </Navbar>
+
     </header>
   );
 };

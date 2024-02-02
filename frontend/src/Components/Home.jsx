@@ -17,7 +17,7 @@ import myImg from "./assets/img/suitImg.jpg";
 
 const Home = () => {
   return (
-    <div className="hero-banner py-5" id="home">
+    <div className="hero-banner py-3" id="home">
       <Container>
         <Row>
           <Col xs={12} md={7} className="py-3">
