@@ -44,35 +44,45 @@ const Projects = () => {
       name: "Soccer bliss",
       url:"https://soccerblisss.com/",
       content:"",
-      developed:["Wordpress"],
+      developed:{
+        tech:"Wordpress"
+      },
     },
     {
       img:profiviImg,
       name: "Profivi Technology",
       url:"https://profivi.com/",
       content:"",
-      developed:["Wordpress","Divi Theme"],
+      developed:{
+        tech:"Wordpress, Divi Theme"
+      },
     },
     {
       img:lakhImg,
       name: "LA-KH ",
       url:"https://la-kh.com/",
       content:"",
-      developed:["HTML","CSS","Java Script","Bootstrap","Php"],
+      developed:{
+        tech:"HTML, CSS, JavaScript, Bootstrap, Php"
+      },
     },
     {
       img:vanishyaImg,
       name: "Vanishya Consumer Products",
       url:"https://vanishya.com/",
       content:"",
-      developed:["Wordpress","Divi Theme"],
+      developed:{
+        tech:"Wordpress, Divi Theme"
+      },
     },
     {
       img:elitesalonImg,
       name: "Elite Unisex Hair And Beauty Salon",
       url:"https://eliteunisexhairandbeautysalon.in/",
       content:"",
-      developed:["Wordpress","Divi Theme"],
+      developed:{
+        tech:"Wordpress, Divi Theme"
+      },
     },
   ]
 
@@ -88,7 +98,7 @@ const Projects = () => {
             </CardBody>
           </Card>
           {projectData.map((project, index) => (
-            <Col xs={12} md={6} className='py-5' key={index}>
+            <Col xs={12} md={6} className='pt-5' key={index}>
               <Card>
                 <CardImg variant='top' src={project.img} alt={project.titleName}></CardImg>
                 <CardHeader className='text-center py-3'>
@@ -112,13 +122,13 @@ const Projects = () => {
 
       <Container>
         <Row>
-          <Card className="border-none py-3">
+          <Card className="border-none pt-5">
             <CardBody className="text-center">
               <CardTitle as="h2">Live Projects</CardTitle>
             </CardBody>
           </Card>
             {liveProjectData.map((liveProject, index) => (
-              <Col xs={12} md={4} className='py-5' key={index}>
+              <Col xs={12} md={4} className='pt-5' key={index}>
                 <Card>
                   <CardImg variant='top' src={liveProject.img} alt={liveProject.name}></CardImg>
                   <CardHeader className='text-center py-3'>
@@ -128,10 +138,8 @@ const Projects = () => {
                     <CardTitle as="h4">{liveProject.name}</CardTitle>
                     <CardText>{liveProject.content}</CardText>
                     <ListGroup as="ol" numbered>
-                      <ModalTitle as="h5">Technologies Used:</ModalTitle>
-                      {liveProject.developed.map((programs, index) => (
-                        <ListGroupItem key={index} as="li" className='border-none'>{programs}</ListGroupItem>
-                      ))}
+                      <ModalTitle as="h5" className='mb-2'>Technologies Used:</ModalTitle>
+                      <CardText>Build in : {liveProject.developed.tech}</CardText>
                     </ListGroup>
                   </CardBody>
                 </Card>

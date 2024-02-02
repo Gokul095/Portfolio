@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { Badge, Button, Card, CardBody, CardTitle, Col, Container, Form, Row } from 'react-bootstrap'
+import axios from 'axios';
 import * as formik from 'formik';
 import * as yup from 'yup';
 
@@ -15,40 +16,36 @@ const Contact = () => {
   });
 
   const [validated, setValidated] = useState(false);
+  const [formStatus, setFormStatus] = useState(null);
 
-  const formValidated = (event) => {
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
+  // const formValidated = (event) => {
+  //   const form = event.currentTarget;
+  //   if (form.checkValidity() === false) {
+  //     event.preventDefault();
+  //     event.stopPropagation();
+  //   }
 
-    setValidated(true);
-  };
+  //   setValidated(true);
+  // };
 
   
   // const baseUrl = 'http://localhost:8000';
   const baseUrl = 'https://portfolio-v8e5.onrender.com';
 
-  const sendEmail = async (values) => {
-    try {
-      const res = await fetch(`${baseUrl}/email/sendEmail`, {
-        method: 'POST',
-        body: JSON.stringify(values),
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
-        },
-      });
+  const sendEmail = async (values) => { 
+    setFormStatus('pending');
 
-      if (res.status >= 200 && res.status < 300) {
-        alert('Send Successfully!');
+    await axios.post(`${baseUrl}/sendEmail`, values)
+    .then( (res) => {
+      console.log(res);
+      if (res.status === 200) {
+        setFormStatus('success');
       } else {
-        alert('Failed to send. Please try again.');
+        setFormStatus('failure');
       }
-    } catch (error) {
-      console.error('Error sending email:', error);
-    }
+    }).catch((err) => {
+      console.log(err)
+    })
   };
 
 
@@ -63,12 +60,14 @@ const Contact = () => {
             </CardBody>
           </Card>
           <Col xs={12} md={8}>
-            {/* <Badge id='formError' bg='danger' className=''></Badge> */}
+            <Badge id='formMes' bg={formStatus === 'success' ? 'success' : formStatus === 'failure' ? 'danger' : 'info'} className={formStatus === 'pending' ? 'formPen' : formStatus === 'success' ? 'formSucc' : formStatus === 'failure' ? 'formError' : ''}>
+              {formStatus === 'pending' ? 'Sending...' : formStatus === 'success' ? 'Submited Successfully!' : formStatus === 'failure' ? 'Failed to send. Please try again.' : ''}
+            </Badge>
             <Formik
               validationSchema={schema}
               onSubmit={ (values, {resetForm}) => {
                 sendEmail(values);
-                console.log(values);
+
                 resetForm({ values: "" });
               }}
               initialValues={{

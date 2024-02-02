@@ -53,7 +53,7 @@ const NavComp = ({ handleDownloadCv }) => {
     <header className="header-section">
       <Navbar collapseOnSelect  expand="lg" className={`bg-body-tertiary ${scrolled ? "menu-fixed" : ""}`} bg={mode} data-bs-theme={mode} >
         <Container>
-          <div className="d-flex align-items-center">
+          <div className="d-flex align-items-center left-div">
             <Navbar.Brand as={Link} to={"/"}>
               <Image
                 src="GS-white-logo.png"

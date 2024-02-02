@@ -117,7 +117,7 @@ const Skills = () => {
             </CardBody>
           </Card>
           {skillsData.map((skill,index) => (
-            <Col xs={12} md={2} className="py-3" key={index}>
+            <Col xs={6} md={2} className="py-3" key={index}>
               <Card className="skill-set-card">
                   <CardImg variant="top" src={skill.img} alt={skill.name}></CardImg>
                 <CardBody className="text-center">
