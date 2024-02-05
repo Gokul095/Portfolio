@@ -20,7 +20,7 @@ const Home = () => {
     <div className="hero-banner py-3" id="home">
       <Container>
         <Row>
-          <Col xs={12} md={7} className="py-3">
+          <Col xs={12} md={12} className="py-3">
             <Card className="left-hero border-none">
               <CardHeader> 
                 <CardText as='h5'>Hi there!</CardText>
@@ -33,9 +33,9 @@ const Home = () => {
               </CardBody>
             </Card>
           </Col>
-          <Col xs={12} md={5} className="py-3">
+          {/* <Col xs={12} md={5} className="py-3">
             <Image src={myImg} alt="gokul-image" fluid rounded />
-          </Col>
+          </Col> */}
         </Row>
       </Container>
     </div>

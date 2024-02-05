@@ -1,5 +1,6 @@
 import React from "react";
 import aboutImg from "./assets/img/lightImg.jpeg";
+import myImg from "./assets/img/suitImg.jpg";
 
 import {
   Card,
@@ -25,8 +26,11 @@ const About = () => {
     <div id="about" className="pb-5">
       <Container>
         <Row>
-          <Col xs={12} md={6} className="py-3">
+          {/* <Col xs={12} md={6} className="py-3">
             <Image src={aboutImg} alt="gokul-image" fluid rounded />
+          </Col> */}
+          <Col xs={12} md={6} className="py-3">
+            <Image src={myImg} alt="gokul-image" fluid rounded />
           </Col>
 
           <Col xs={12} md={6} className="py-3">
@@ -155,23 +159,28 @@ const About = () => {
             </CardHeader>
             <CardBody className="exp-body">
               <div className="mb-4">
-              <CardTitle as="h6">2016 - 2017</CardTitle>
-              <CardTitle as="h6">SSLC</CardTitle>
-              <CardTitle as="h6">Holy Infant Jesus Matriculation Hr.Sec School</CardTitle>
+                <CardTitle as="h6">2016 - 2017</CardTitle>
+                <CardTitle as="h6">SSLC</CardTitle>
+                <CardTitle as="h6">
+                  Holy Infant Jesus Matriculation Hr.Sec School
+                </CardTitle>
               </div>
 
               <div className="mb-4">
-              <CardTitle as="h6">2018 - 2019</CardTitle>
-              <CardTitle as="h6">HSC</CardTitle>
-              <CardTitle as="h6">Holy Infant Jesus Matriculation Hr.Sec School</CardTitle>
+                <CardTitle as="h6">2018 - 2019</CardTitle>
+                <CardTitle as="h6">HSC</CardTitle>
+                <CardTitle as="h6">
+                  Holy Infant Jesus Matriculation Hr.Sec School
+                </CardTitle>
               </div>
 
               <div className="mb-4">
-              <CardTitle as="h6">2019- 2022</CardTitle>
-              <CardTitle as="h6">B.Com </CardTitle>
-              <CardTitle as="h6">St.Thomas College Of Arts And Science</CardTitle>
+                <CardTitle as="h6">2019- 2022</CardTitle>
+                <CardTitle as="h6">B.Com </CardTitle>
+                <CardTitle as="h6">
+                  St.Thomas College Of Arts And Science
+                </CardTitle>
               </div>
-              
             </CardBody>
           </Card>
         </CardGroup>
