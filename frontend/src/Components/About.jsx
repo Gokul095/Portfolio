@@ -115,76 +115,79 @@ const About = () => {
       </Container>
       <Container>
         <CardGroup>
+        <Row>
+        <Col xs={12}>
           <Card>
             <CardHeader>
               <CardTitle className="about-header mb-0" as="h3">
                 Experience
               </CardTitle>
             </CardHeader>
+          </Card> 
+          </Col>
+          <Col xs={12} md={6} className="py-3">
+          <Card>
             <CardBody className="exp-body">
-              
-                <CardTitle as="h4">Web Developer</CardTitle>
-                <CardText as="p" className="mb-1">
-                  Profivi Technology
-                </CardText>
-                <CardText as="p">Nov 2022 - Nov 2023</CardText>
+              <CardTitle as="h4">Web Developer</CardTitle>
+              <CardText as="p" className="mb-1">
+                Profivi Technology
+              </CardText>
+              <CardText as="p">Nov 2022 - Nov 2023</CardText>
 
-                <CardTitle>Roles & Responsibilities</CardTitle>
-                <CardText as="li">
-                  Developed responsive and user-friendly web pages using HTML,
-                  CSS, and JavaScript.
-                </CardText>
-                <CardText as="li">
-                  Ensured cross-browser compatibility and optimized web
-                  applications for various devices.
-                </CardText>
-                <CardText as="li">
-                  Implemented modern design principles and collaborated with
-                  UI/UX designers to enhance the user experience.
-                </CardText>
-                <CardText as="li">
-                  Designed and implemented server-side logic using programming
-                  languages PHP, Node JS
-                </CardText>
-                <CardText as="li">
-                  Worked with databases, including MySQL to manage and store
-                  data efficiently.
-                </CardText>
-              
+              <CardTitle>Roles & Responsibilities</CardTitle>
+              <CardText as="li">
+                Developed responsive and user-friendly web pages using HTML,
+                CSS, and JavaScript.
+              </CardText>
+              <CardText as="li">
+                Ensured cross-browser compatibility and optimized web
+                applications for various devices.
+              </CardText>
+              <CardText as="li">
+                Implemented modern design principles and collaborated with UI/UX
+                designers to enhance the user experience.
+              </CardText>
+              <CardText as="li">
+                Designed and implemented server-side logic using programming
+                languages PHP, Node JS
+              </CardText>
+              <CardText as="li">
+                Worked with databases, including MySQL to manage and store data
+                efficiently.
+              </CardText>
             </CardBody>
           </Card>
+          </Col>
+          <Col xs={12} md={6} className="py-3">
           <Card>
-            <CardHeader>
-              <CardTitle className="about-header mb-0" as="h3">
-                
-              </CardTitle>
-            </CardHeader>
-            <CardBody className="exp-body">
+          <CardBody className="exp-body">
              
               
-                <CardTitle as="h4">Web Developer</CardTitle>
-                <CardText as="p" className="mb-1">
-                  MyFluiditi
-                </CardText>
-                <CardText as="p">April 2024 - Present</CardText>
+             <CardTitle as="h4">Web Developer</CardTitle>
+             <CardText as="p" className="mb-1">
+               MyFluiditi
+             </CardText>
+             <CardText as="p">April 2024 - Present</CardText>
 
-                <CardTitle>Roles & Responsibilities</CardTitle>
-                <CardText as="li">
-                  Translated Figma designs into fully functional WordPress websites, ensuring pixel-perfect
- implementation . Developed 12+ websites, all successfully running live.
-                </CardText>
-                <CardText as="li">
-                 Implemented frontend API functions to handle data retrieval from backend systems and display it
- on the client side, as well as posting data from frontend forms to the backend via API, ensuring
- smooth data exchange and responsiveness.
-                </CardText>
-                <CardText as="li">
-                  Built and maintained E-Commerce websites, integrating secure payment gateways for a seamless
- shopping experience.
-                </CardText>
-              
-            </CardBody>
+             <CardTitle>Roles & Responsibilities</CardTitle>
+             <CardText as="li">
+               Translated Figma designs into fully functional WordPress websites, ensuring pixel-perfect
+implementation . Developed 12+ websites, all successfully running live.
+             </CardText>
+             <CardText as="li">
+              Implemented frontend API functions to handle data retrieval from backend systems and display it
+on the client side, as well as posting data from frontend forms to the backend via API, ensuring
+smooth data exchange and responsiveness.
+             </CardText>
+             <CardText as="li">
+               Built and maintained E-Commerce websites, integrating secure payment gateways for a seamless
+shopping experience.
+             </CardText>
+           
+         </CardBody>
           </Card>
+          </Col>
+          <Col xs={12} md={6} className="py-3">
           <Card>
             <CardHeader>
               <CardTitle className="about-header mb-0" as="h3">
@@ -217,6 +220,8 @@ const About = () => {
               </div>
             </CardBody>
           </Card>
+          </Col>
+          </Row>
         </CardGroup>
       </Container>
     </div>
