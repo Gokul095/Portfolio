@@ -122,7 +122,7 @@ const About = () => {
               </CardTitle>
             </CardHeader>
             <CardBody className="exp-body">
-              <div>
+              
                 <CardTitle as="h4">Web Developer</CardTitle>
                 <CardText as="p" className="mb-1">
                   Profivi Technology
@@ -150,8 +150,18 @@ const About = () => {
                   Worked with databases, including MySQL to manage and store
                   data efficiently.
                 </CardText>
-              </div>
-              <div>
+              
+            </CardBody>
+          </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle className="about-header mb-0" as="h3">
+                
+              </CardTitle>
+            </CardHeader>
+            <CardBody className="exp-body">
+             
+              
                 <CardTitle as="h4">Web Developer</CardTitle>
                 <CardText as="p" className="mb-1">
                   MyFluiditi
@@ -172,7 +182,7 @@ const About = () => {
                   Built and maintained E-Commerce websites, integrating secure payment gateways for a seamless
  shopping experience.
                 </CardText>
-              </div>
+              
             </CardBody>
           </Card>
           <Card>
