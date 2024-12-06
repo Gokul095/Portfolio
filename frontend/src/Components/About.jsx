@@ -119,7 +119,7 @@ const About = () => {
         <Col xs={12}>
           <Card>
             <CardHeader>
-              <CardTitle className="about-header mb-0" as="h3">
+              <CardTitle className="about-header mb-0 border-bottom-0" as="h3">
                 Experience
               </CardTitle>
             </CardHeader>
