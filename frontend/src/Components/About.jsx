@@ -118,7 +118,7 @@ const About = () => {
         <Row>
         <Col xs={12}>
           <Card>
-            <CardHeader>
+            <CardHeader className="border-bottom-0">
               <CardTitle className="about-header mb-0 border-bottom-0" as="h3">
                 Experience
               </CardTitle>
