@@ -122,6 +122,7 @@ const About = () => {
               </CardTitle>
             </CardHeader>
             <CardBody className="exp-body">
+              <div>
               <CardTitle as="h4">Web Developer</CardTitle>
               <CardText as="p" className="mb-1">
                 Profivi Technology
@@ -149,6 +150,36 @@ const About = () => {
                 Worked with databases, including MySQL to manage and store data
                 efficiently.
               </CardText>
+              </div>
+               <div>
+              <CardTitle as="h4">Web Developer</CardTitle>
+              <CardText as="p" className="mb-1">
+                Profivi Technology
+              </CardText>
+              <CardText as="p">Nov 2022 - Nov 2023</CardText>
+
+              <CardTitle>Roles & Responsibilities</CardTitle>
+              <CardText as="li">
+                Developed responsive and user-friendly web pages using HTML,
+                CSS, and JavaScript.
+              </CardText>
+              <CardText as="li">
+                Ensured cross-browser compatibility and optimized web
+                applications for various devices.
+              </CardText>
+              <CardText as="li">
+                Implemented modern design principles and collaborated with UI/UX
+                designers to enhance the user experience.
+              </CardText>
+              <CardText as="li">
+                Designed and implemented server-side logic using programming
+                languages PHP, Node JS
+              </CardText>
+              <CardText as="li">
+                Worked with databases, including MySQL to manage and store data
+                efficiently.
+              </CardText>
+              </div>
             </CardBody>
           </Card>
           <Card>
