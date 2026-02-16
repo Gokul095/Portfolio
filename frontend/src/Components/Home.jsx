@@ -22,14 +22,14 @@ const Home = () => {
         <Row>
           <Col xs={12} md={12} className="py-3">
             <Card className="left-hero border-none">
-              <CardHeader> 
+              <CardHeader>
                 <CardText as='h5'>Hi there!</CardText>
                 <CardText as='h2'>I'm Gokul Saran</CardText>
               </CardHeader>
               <CardBody>
-                <CardTitle as="h1">Creative Web</CardTitle>
-                <CardTitle as="h1" className="d-block text-design" data-text="Designer/Developer">Designer/Developer</CardTitle>
-                <CardText className="py-3">Proficient in both front-end and back-end technologies, I bring a track record of successfully delivering visually appealing, user-friendly websites and applications. My expertise extends to responsive design, performance optimization, and cross-browser compatibility, ensuring seamless functionality across all platforms.</CardText>
+                <CardTitle as="h1">Frontend Developer</CardTitle>
+                <CardTitle as="h1" className="d-block text-design" data-text="Angular / React">Angular / React</CardTitle>
+                <CardText className="py-3">Frontend Developer with 2 years of experience designing and developing responsive, user-centric web applications. Proficient in Angular, React, TypeScript, JavaScript, and modern UI frameworks, with a strong focus on performance, usability, and clean code.</CardText>
               </CardBody>
             </Card>
           </Col>

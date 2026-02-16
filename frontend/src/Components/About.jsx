@@ -43,11 +43,10 @@ const About = () => {
               </CardHeader>
               <CardBody>
                 <CardText as="p">
-                  I'm Gokul Saran, 23 years old. After completing my Bachelor's
-                  Degree in B.Com in 2022, I pursued self-learning to enhance my
-                  skills in web development. Currently, I have 1 year of
-                  valuable experience in the field, contributing to my
-                  continuous growth in this dynamic industry.
+                  I'm Gokul Saran, a passionate Frontend Developer with 2 years of
+                  experience in building responsive and user-centric web applications.
+                  I specialize in Angular, React, TypeScript, and modern UI frameworks,
+                  delivering high-quality code and seamless user experiences.
                 </CardText>
                 <CardText as="h2">Personal Info</CardText>
                 <Container>
@@ -115,112 +114,89 @@ const About = () => {
       </Container>
       <Container>
         <CardGroup>
-        <Row>
-        <Col xs={12}>
-          <Card>
-            <CardHeader className="border-bottom-0">
-              <CardTitle className="about-header mb-0 border-bottom-0" as="h3">
-                Experience
-              </CardTitle>
-            </CardHeader>
-          </Card> 
-          </Col>
-          <Col xs={12} md={6} className="py-3">
-          <Card>
-            <CardBody className="exp-body">
-              <CardTitle as="h4">Web Developer</CardTitle>
-              <CardText as="p" className="mb-1">
-                Profivi Technology
-              </CardText>
-              <CardText as="p">Nov 2022 - Nov 2023</CardText>
+          <Row>
+            <Col xs={12}>
+              <Card>
+                <CardHeader className="border-bottom-0">
+                  <CardTitle className="about-header mb-0 border-bottom-0" as="h3">
+                    Experience
+                  </CardTitle>
+                </CardHeader>
+              </Card>
+            </Col>
+            <Col xs={12} md={6} className="py-3">
+              <Card>
+                <CardBody className="exp-body">
+                  <CardTitle as="h4">Frontend Developer</CardTitle>
+                  <CardText as="p" className="mb-1">
+                    MyFluiditi, Chennai
+                  </CardText>
+                  <CardText as="p">Apr 2024 - Present</CardText>
 
-              <CardTitle>Roles & Responsibilities</CardTitle>
-              <CardText as="li">
-                Developed responsive and user-friendly web pages using HTML,
-                CSS, and JavaScript.
-              </CardText>
-              <CardText as="li">
-                Ensured cross-browser compatibility and optimized web
-                applications for various devices.
-              </CardText>
-              <CardText as="li">
-                Implemented modern design principles and collaborated with UI/UX
-                designers to enhance the user experience.
-              </CardText>
-              <CardText as="li">
-                Designed and implemented server-side logic using programming
-                languages PHP, Node JS
-              </CardText>
-              <CardText as="li">
-                Worked with databases, including MySQL to manage and store data
-                efficiently.
-              </CardText>
-            </CardBody>
-          </Card>
-          </Col>
-          <Col xs={12} md={6} className="py-3">
-          <Card>
-          <CardBody className="exp-body">
-             
-              
-             <CardTitle as="h4">Web Developer</CardTitle>
-             <CardText as="p" className="mb-1">
-               MyFluiditi
-             </CardText>
-             <CardText as="p">April 2024 - Present</CardText>
+                  <CardTitle>Roles & Responsibilities</CardTitle>
+                  <CardBody as="ul">
+                    <CardText as="li">Developed scalable, modular UI components using Angular, React and TypeScript, ensuring high performance and reusability.</CardText>
+                    <CardText as="li">Converted complex Figma designs into fully responsive, production-ready UI with clean, optimized component architecture.</CardText>
+                    <CardText as="li">Integrated REST APIs for products, orders, vendors, and service workflows with efficient state and data management.</CardText>
+                    <CardText as="li">Built key application modules including store listings, product pages, vendor dashboards, and end-to-end order flows.</CardText>
+                    <CardText as="li">Delivered robust UI systems for centralized catalog, payout cycle, coupon engine, and vendor priority ordering.</CardText>
+                  </CardBody>
+                </CardBody>
+              </Card>
+            </Col>
+            <Col xs={12} md={6} className="py-3">
+              <Card>
+                <CardBody className="exp-body">
+                  <CardTitle as="h4">Web Developer</CardTitle>
+                  <CardText as="p" className="mb-1">
+                    Profivi Technologies, Chennai
+                  </CardText>
+                  <CardText as="p">Nov 2022 - Nov 2023</CardText>
 
-             <CardTitle>Roles & Responsibilities</CardTitle>
-             <CardText as="li">
-               Translated Figma designs into fully functional WordPress websites, ensuring pixel-perfect
-implementation . Developed 12+ websites, all successfully running live.
-             </CardText>
-             <CardText as="li">
-              Implemented frontend API functions to handle data retrieval from backend systems and display it
-on the client side, as well as posting data from frontend forms to the backend via API, ensuring
-smooth data exchange and responsiveness.
-             </CardText>
-             <CardText as="li">
-               Built and maintained E-Commerce websites, integrating secure payment gateways for a seamless
-shopping experience.
-             </CardText>
-           
-         </CardBody>
-          </Card>
-          </Col>
-          <Col xs={12} md={6} className="py-3">
-          <Card>
-            <CardHeader>
-              <CardTitle className="about-header mb-0" as="h3">
-                Education
-              </CardTitle>
-            </CardHeader>
-            <CardBody className="exp-body">
-              <div className="mb-4">
-                <CardTitle as="h6">2016 - 2017</CardTitle>
-                <CardTitle as="h6">SSLC</CardTitle>
-                <CardTitle as="h6">
-                  Holy Infant Jesus Matriculation Hr.Sec School
-                </CardTitle>
-              </div>
+                  <CardTitle>Roles & Responsibilities</CardTitle>
+                  <CardBody as="ul">
+                    <CardText as="li">Built responsive websites using HTML, CSS, JavaScript & Bootstrap.</CardText>
+                    <CardText as="li">Customized WordPress sites using Elementor & Divi.</CardText>
+                    <CardText as="li">Enhanced website performance, SEO, and user experience.</CardText>
+                  </CardBody>
+                </CardBody>
+              </Card>
+            </Col>
+            <Col xs={12} md={6} className="py-3">
+              <Card>
+                <CardBody className="exp-body">
+                  <CardTitle as="h4">Freelance Web Developer</CardTitle>
+                  <CardText as="p" className="mb-1">
+                    Remote
+                  </CardText>
+                  <CardText as="p">Dec 2023 - Present</CardText>
 
-              <div className="mb-4">
-                <CardTitle as="h6">2018 - 2019</CardTitle>
-                <CardTitle as="h6">HSC</CardTitle>
-                <CardTitle as="h6">
-                  Holy Infant Jesus Matriculation Hr.Sec School
-                </CardTitle>
-              </div>
-
-              <div className="mb-4">
-                <CardTitle as="h6">2019- 2022</CardTitle>
-                <CardTitle as="h6">B.Com </CardTitle>
-                <CardTitle as="h6">
-                  St.Thomas College Of Arts And Science
-                </CardTitle>
-              </div>
-            </CardBody>
-          </Card>
-          </Col>
+                  <CardTitle>Roles & Responsibilities</CardTitle>
+                  <CardBody as="ul">
+                    <CardText as="li">Developed multiple WordPress & WooCommerce websites with Razorpay integration.</CardText>
+                    <CardText as="li">Managed deployment, hosting, updates, and client training.</CardText>
+                  </CardBody>
+                </CardBody>
+              </Card>
+            </Col>
+            <Col xs={12} md={6} className="py-3">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="about-header mb-0" as="h3">
+                    Education
+                  </CardTitle>
+                </CardHeader>
+                <CardBody className="exp-body">
+                  <div className="mb-4">
+                    <CardTitle as="h6">2019 - 2022</CardTitle>
+                    <CardTitle as="h6">B.Com (Commerce)</CardTitle>
+                    <CardTitle as="h6">
+                      St. Thomas College of Arts & Science, Chennai
+                    </CardTitle>
+                  </div>
+                </CardBody>
+              </Card>
+            </Col>
           </Row>
         </CardGroup>
       </Container>

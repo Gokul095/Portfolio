@@ -15,95 +15,101 @@ import htmlIcon from "./assets/img/Technical logos/HTML5.png"
 import cssIcon from "./assets/img/Technical logos/CSS3.png"
 import bootstrapIcon from "./assets/img/Technical logos/bootstrap.png"
 import javaScriptIcon from "./assets/img/Technical logos/java-script.png"
-import jQueryIcon from "./assets/img/Technical logos/jQuery.png"
+import AngularIcon from "./assets/img/Technical logos/AngularJS_logo.png"
 import reactIcon from "./assets/img/Technical logos/react.png"
-import materialIcon from "./assets/img/Technical logos/material.png"
+import TypeScriptIcon from "./assets/img/Technical logos/typescript-icon logo.png"
 import nodeIcon from "./assets/img/Technical logos/node-js.png"
 import expressIcon from "./assets/img/Technical logos/express-js.png"
 import mongodbIcon from "./assets/img/Technical logos/mongo-db.png"
-import phpIcon from "./assets/img/Technical logos/php.png"
-import mySqlIcon from "./assets/img/Technical logos/mysql.png"
+import tailwindcssIcon from "./assets/img/Technical logos/tailwindcss logo.png"
+import woocommerceIcon from "./assets/img/Technical logos/woocommerce-logo.png"
 import wordpressIcon from "./assets/img/Technical logos/wordpress.png"
 import figmaIcon from "./assets/img/Technical logos/figma.png"
 import photoshopIcon from "./assets/img/Technical logos/adobe-photoshop.png"
+import gitIcon from "./assets/img/Technical logos/github-logo.png"
 
 const Skills = () => {
 
-  const skillsData =[
+  const skillsData = [
     {
       name: "HTML",
-      percentage: 90,
+      percentage: 95,
       img: htmlIcon,
     },
     {
       name: "CSS",
-      percentage: 90,
-      img:cssIcon,
+      percentage: 95,
+      img: cssIcon,
     },
     {
       name: "Bootstrap",
-      percentage: 90,
-      img:bootstrapIcon,
+      percentage: 95,
+      img: bootstrapIcon,
+    },
+    {
+      name: "Tailwind CSS",
+      percentage: 85,
+      img: tailwindcssIcon,
     },
     {
       name: "Java Script",
-      percentage: 75,
-      img:javaScriptIcon,
+      percentage: 90,
+      img: javaScriptIcon,
     },
     {
-      name: "jQuery",
-      percentage: 75,
-      img:jQueryIcon,
+      name: "TypeScript",
+      percentage: 80,
+      img: TypeScriptIcon,
     },
     {
       name: "React Js",
-      percentage: 75,
-      img:reactIcon,
+      percentage: 85,
+      img: reactIcon,
     },
     {
-      name: "Material Ui",
-      percentage: 85,
-      img:materialIcon,
+      name: "Angular",
+      percentage: 70,
+      img: AngularIcon,
     },
     {
       name: "Node JS",
-      percentage: 50,
-      img:nodeIcon,
+      percentage: 75,
+      img: nodeIcon,
     },
     {
       name: "Express Js",
-      percentage: 50,
-      img:expressIcon,
+      percentage: 75,
+      img: expressIcon,
     },
     {
       name: "Mongo Db",
-      percentage: 50,
-      img:mongodbIcon,
-    },
-    {
-      name: "Php",
-      percentage: 55,
-      img:phpIcon,
-    },
-    {
-      name: "MySql",
-      percentage: 55,
-      img:mySqlIcon,
+      percentage: 70,
+      img: mongodbIcon,
     },
     {
       name: "Wordpress",
+      percentage: 95,
+      img: wordpressIcon,
+    },
+    {
+      name: "WooCommerce",
       percentage: 90,
-      img:wordpressIcon,
+      img: woocommerceIcon,
     },
     {
       name: "Figma",
-      percentage: 55,
-      img:figmaIcon,
+      percentage: 85,
+      img: figmaIcon,
+    },
+    {
+      name: "Git/GitHub",
+      percentage: 85,
+      img: gitIcon,
     },
     {
       name: "Photoshop",
-      percentage: 60,
-      img:photoshopIcon,
+      percentage: 75,
+      img: photoshopIcon,
     },
   ]
 
@@ -116,10 +122,10 @@ const Skills = () => {
               <CardTitle as="h2">Skill Set</CardTitle>
             </CardBody>
           </Card>
-          {skillsData.map((skill,index) => (
+          {skillsData.map((skill, index) => (
             <Col xs={6} md={2} className="py-3" key={index}>
               <Card className="skill-set-card">
-                  <CardImg variant="top" src={skill.img} alt={skill.name}></CardImg>
+                <CardImg variant="top" src={skill.img} alt={skill.name}></CardImg>
                 <CardBody className="text-center">
                   <CardTitle as="h5">{skill.name}</CardTitle>
                 </CardBody>
@@ -127,8 +133,8 @@ const Skills = () => {
               </Card>
             </Col>
           ))}
-          
-          
+
+
         </Row>
       </Container>
     </div>
