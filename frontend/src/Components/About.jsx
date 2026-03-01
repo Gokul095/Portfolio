@@ -43,10 +43,12 @@ const About = () => {
               </CardHeader>
               <CardBody>
                 <CardText as="p">
-                  I'm Gokul Saran, a passionate Frontend Developer with 2 years of
-                  experience in building responsive and user-centric web applications.
-                  I specialize in Angular, React, TypeScript, and modern UI frameworks,
-                  delivering high-quality code and seamless user experiences.
+                  Frontend Developer with 2+ years of experience building scalable,
+                  responsive, and user-centric web applications. Strong expertise in
+                  React.js, Angular, TypeScript, and modern UI architectures.
+                  Experienced in ERP systems, multi-role dashboards, REST API
+                  integration, and performance optimization. Focused on clean
+                  code, modular architecture, and seamless user experience.
                 </CardText>
                 <CardText as="h2">Personal Info</CardText>
                 <Container>
@@ -135,11 +137,11 @@ const About = () => {
 
                   <CardTitle>Roles & Responsibilities</CardTitle>
                   <CardBody as="ul">
-                    <CardText as="li">Developed scalable, modular UI components using Angular, React and TypeScript, ensuring high performance and reusability.</CardText>
-                    <CardText as="li">Converted complex Figma designs into fully responsive, production-ready UI with clean, optimized component architecture.</CardText>
-                    <CardText as="li">Integrated REST APIs for products, orders, vendors, and service workflows with efficient state and data management.</CardText>
-                    <CardText as="li">Built key application modules including store listings, product pages, vendor dashboards, and end-to-end order flows.</CardText>
-                    <CardText as="li">Delivered robust UI systems for centralized catalog, payout cycle, coupon engine, and vendor priority ordering.</CardText>
+                    <CardText as="li">Developed scalable and reusable UI components using React.js, Angular, and TypeScript.</CardText>
+                    <CardText as="li">Converted complex Figma designs into production-ready, fully responsive interfaces.</CardText>
+                    <CardText as="li">Integrated REST APIs for products, vendors, services, and order workflows.</CardText>
+                    <CardText as="li">Built modular dashboards and multi-role access systems.</CardText>
+                    <CardText as="li">Improved application performance and optimized component structure for reusability.</CardText>
                   </CardBody>
                 </CardBody>
               </Card>
@@ -155,9 +157,9 @@ const About = () => {
 
                   <CardTitle>Roles & Responsibilities</CardTitle>
                   <CardBody as="ul">
-                    <CardText as="li">Built responsive websites using HTML, CSS, JavaScript & Bootstrap.</CardText>
-                    <CardText as="li">Customized WordPress sites using Elementor & Divi.</CardText>
-                    <CardText as="li">Enhanced website performance, SEO, and user experience.</CardText>
+                    <CardText as="li">Developed responsive websites using HTML, CSS, JavaScript & Bootstrap.</CardText>
+                    <CardText as="li">Customized WordPress and WooCommerce websites using Elementor & Divi.</CardText>
+                    <CardText as="li">Improved website performance, SEO, and overall user experience.</CardText>
                   </CardBody>
                 </CardBody>
               </Card>
@@ -173,8 +175,8 @@ const About = () => {
 
                   <CardTitle>Roles & Responsibilities</CardTitle>
                   <CardBody as="ul">
-                    <CardText as="li">Developed multiple WordPress & WooCommerce websites with Razorpay integration.</CardText>
-                    <CardText as="li">Managed deployment, hosting, updates, and client training.</CardText>
+                    <CardText as="li">Developed WordPress and WooCommerce e-commerce websites with Razorpay integration.</CardText>
+                    <CardText as="li">Managed hosting, deployment, maintenance, and client support.</CardText>
                   </CardBody>
                 </CardBody>
               </Card>

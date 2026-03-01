@@ -16,12 +16,21 @@ const Projects = () => {
     {
       img: defaultImg,
       link: '#',
-      titleName: "SELLEEZ — POS-TYPE E-COMMERCE APPLICATION",
-      content: "Converted Figma UI into React.js + TypeScript real-time screens. Developed multi-tenant access for Super Admin, Partners, Sub-Partners & Users. Implemented full location hierarchy and catalog module with PO approval workflow.",
+      titleName: "SELLEZ — ERP Application",
+      content: "Developed a full-scale ERP web application using React.js and TypeScript. Implemented multi-role access (Super Admin, Admin, Partners, Users). Built core ERP modules including inventory management, vendor management, order processing, and reporting dashboards. Designed structured location hierarchy (Country → State → City → Area → Pincode → Zone → Territory). Developed catalog module, PO approval workflow, challan generation, and delivery proof with signature upload.",
       programs: {
         frontend: "React.js, TypeScript, CSS, Bootstrap",
-        backend: "Node.js (API Integration)",
-        database: "Relational DB",
+        api: "REST API Integration",
+      },
+    },
+    {
+      img: defaultImg,
+      link: '#',
+      titleName: "YANGOZO — On-Demand Service Application",
+      content: "Developed a multi-role on-demand service platform with real-time workflows. Implemented Technician flow (job acceptance, service updates), Professional flow (service management, booking handling), and Delivery flow (pickup, status tracking). Built responsive dashboards and dynamic service request management system.",
+      programs: {
+        frontend: "Angular",
+        api: "REST API Integration",
       },
     },
     {
@@ -33,17 +42,6 @@ const Projects = () => {
         frontend: "React.js, Bootstrap",
         backend: "Node.js, Express.js",
         database: "MongoDB",
-      },
-    },
-    {
-      img: futurefindsImg,
-      link: '#',
-      titleName: "FUTUREFINDS (E-COMMERCE)",
-      content: "Developed a complete e-commerce platform using WordPress & WooCommerce. Integrated payments, product setup, and ensured a responsive UI for a seamless shopping experience.",
-      programs: {
-        frontend: "WordPress, Elementor",
-        backend: "WooCommerce",
-        database: "MySQL",
       },
     },
     {
@@ -74,45 +72,36 @@ const Projects = () => {
 
   const liveProjectData = [
     {
-      img: soccerblissImg,
-      name: "Soccer bliss",
-      url: "https://soccerblisss.com/",
-      content: "",
+      img: futurefindsImg,
+      name: "FUTUREFINDS (E-COMMERCE)",
+      url: "#",
+      content: "Developed a complete e-commerce platform using WordPress & WooCommerce. Integrated payments, product setup, and ensured a responsive UI for a seamless shopping experience.",
       developed: {
-        tech: "Wordpress"
+        tech: "WordPress, Elementor, WooCommerce"
       },
     },
     {
-      img: profiviImg,
-      name: "Profivi Technology",
-      url: "https://profivi.com/",
-      content: "",
+      img: defaultImg,
+      name: "Maara Crackers",
+      url: "#",
+      content: "Maara Crackers required a modern and easy-to-use e-commerce website to sell crackers online. We developed a clean, user-friendly shopping platform that allows customers to browse products easily and place orders without hassle.",
       developed: {
-        tech: "Wordpress, Divi Theme"
+        tech: "E-commerce Website Development, UI/UX Design, Mobile-Responsive Layout"
       },
     },
     {
-      img: lakhImg,
-      name: "LA-KH ",
-      url: "https://la-kh.com/",
-      content: "",
+      img: defaultImg,
+      name: "Meeku Girls",
+      url: "#",
+      content: "Meeku Girls is an online jewellery brand targeting modern shoppers. We developed a stylish and elegant e-commerce website that highlights product visuals, enhances user experience, and builds trust with customers.",
       developed: {
-        tech: "HTML, CSS, JavaScript, Bootstrap, Php"
+        tech: "E-commerce Website Development, UI/UX Design, Mobile-Responsive Layout"
       },
     },
     {
       img: vanishyaImg,
       name: "Vanishya Consumer Products",
       url: "https://vanishya.com/",
-      content: "",
-      developed: {
-        tech: "Wordpress, Divi Theme"
-      },
-    },
-    {
-      img: elitesalonImg,
-      name: "Elite Unisex Hair And Beauty Salon",
-      url: "https://eliteunisexhairandbeautysalon.in/",
       content: "",
       developed: {
         tech: "Wordpress, Divi Theme"
@@ -143,9 +132,10 @@ const Projects = () => {
                   <CardText>{project.content}</CardText>
                   <ListGroup as="ol" numbered>
                     <ModalTitle as="h5" className='mb-2'>Technologies Used:</ModalTitle>
-                    <CardText>Frontend : {project.programs.frontend}</CardText>
-                    <CardText>Backend : {project.programs.backend}</CardText>
-                    <CardText>Database : {project.programs.database}</CardText>
+                    {project.programs.frontend && <CardText>Frontend : {project.programs.frontend}</CardText>}
+                    {project.programs.backend && <CardText>Backend : {project.programs.backend}</CardText>}
+                    {project.programs.database && <CardText>Database : {project.programs.database}</CardText>}
+                    {project.programs.api && <CardText>API Integration : {project.programs.api}</CardText>}
                   </ListGroup>
                 </CardBody>
               </Card>

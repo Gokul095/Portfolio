@@ -29,7 +29,7 @@ const Home = () => {
               <CardBody>
                 <CardTitle as="h1">Frontend Developer</CardTitle>
                 <CardTitle as="h1" className="d-block text-design" data-text="Angular / React">Angular / React</CardTitle>
-                <CardText className="py-3">Frontend Developer with 2 years of experience designing and developing responsive, user-centric web applications. Proficient in Angular, React, TypeScript, JavaScript, and modern UI frameworks, with a strong focus on performance, usability, and clean code.</CardText>
+                <CardText className="py-3">Frontend Developer with 2+ years of experience building scalable, responsive, and user-centric web applications. Strong expertise in React.js, Angular, TypeScript, and modern UI architectures. Experienced in ERP systems, multi-role dashboards, REST API integration, and performance optimization. Focused on clean code, modular architecture, and seamless user experience.</CardText>
               </CardBody>
             </Card>
           </Col>
