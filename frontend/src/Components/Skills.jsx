@@ -31,86 +31,22 @@ import gitIcon from "./assets/img/Technical logos/github-logo.png"
 const Skills = () => {
 
   const skillsData = [
-    {
-      name: "HTML",
-      percentage: 95,
-      img: htmlIcon,
-    },
-    {
-      name: "CSS",
-      percentage: 95,
-      img: cssIcon,
-    },
-    {
-      name: "Bootstrap",
-      percentage: 95,
-      img: bootstrapIcon,
-    },
-    {
-      name: "Tailwind CSS",
-      percentage: 85,
-      img: tailwindcssIcon,
-    },
-    {
-      name: "Java Script",
-      percentage: 90,
-      img: javaScriptIcon,
-    },
-    {
-      name: "TypeScript",
-      percentage: 80,
-      img: TypeScriptIcon,
-    },
-    {
-      name: "React Js",
-      percentage: 85,
-      img: reactIcon,
-    },
-    {
-      name: "Angular",
-      percentage: 70,
-      img: AngularIcon,
-    },
-    {
-      name: "Node JS",
-      percentage: 75,
-      img: nodeIcon,
-    },
-    {
-      name: "Express Js",
-      percentage: 75,
-      img: expressIcon,
-    },
-    {
-      name: "Mongo Db",
-      percentage: 70,
-      img: mongodbIcon,
-    },
-    {
-      name: "Wordpress",
-      percentage: 95,
-      img: wordpressIcon,
-    },
-    {
-      name: "WooCommerce",
-      percentage: 90,
-      img: woocommerceIcon,
-    },
-    {
-      name: "Figma",
-      percentage: 85,
-      img: figmaIcon,
-    },
-    {
-      name: "Git/GitHub",
-      percentage: 85,
-      img: gitIcon,
-    },
-    {
-      name: "Photoshop",
-      percentage: 75,
-      img: photoshopIcon,
-    },
+    { name: "HTML5", percentage: 95, img: htmlIcon },
+    { name: "CSS3", percentage: 95, img: cssIcon },
+    { name: "JavaScript", percentage: 90, img: javaScriptIcon },
+    { name: "TypeScript", percentage: 80, img: TypeScriptIcon },
+    { name: "React Js", percentage: 85, img: reactIcon },
+    { name: "Angular", percentage: 80, img: AngularIcon },
+    { name: "Bootstrap", percentage: 95, img: bootstrapIcon },
+    { name: "Tailwind CSS", percentage: 85, img: tailwindcssIcon },
+    { name: "Node JS", percentage: 75, img: nodeIcon },
+    { name: "Express Js", percentage: 75, img: expressIcon },
+    { name: "MongoDB", percentage: 70, img: mongodbIcon },
+    { name: "WordPress", percentage: 95, img: wordpressIcon },
+    { name: "WooCommerce", percentage: 90, img: woocommerceIcon },
+    { name: "Figma", percentage: 85, img: figmaIcon },
+    { name: "Git / GitHub", percentage: 85, img: gitIcon },
+    { name: "Photoshop", percentage: 75, img: photoshopIcon },
   ]
 
   return (

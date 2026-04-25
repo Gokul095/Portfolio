@@ -26,11 +26,11 @@ const Projects = () => {
     {
       img: defaultImg,
       link: '#',
-      titleName: "YANGOZO — On-Demand Service Application",
-      content: "Developed a multi-role on-demand service platform with real-time workflows. Implemented Technician flow (job acceptance, service updates), Professional flow (service management, booking handling), and Delivery flow (pickup, status tracking). Built responsive dashboards and dynamic service request management system.",
+      titleName: "YANGOZO — On-Demand Service Platform",
+      content: "Developed a multi-role on-demand service platform with Admin, Customer, Vendor, and Service Provider dashboards. Implemented NgRx state management and reusable shared modules. Integrated Razorpay payment gateway for UPI, cards, and wallet payments. Built booking flow, order management, and role-based navigation systems.",
       programs: {
-        frontend: "Angular",
-        api: "REST API Integration",
+        frontend: "Angular, NgRx, SCSS",
+        api: "REST API Integration, Razorpay",
       },
     },
     {
@@ -125,7 +125,7 @@ const Projects = () => {
               <Card>
                 <CardImg variant='top' src={project.img} alt={project.titleName}></CardImg>
                 <CardHeader className='text-center py-3'>
-                  <Button href={project.link} className='btn-cutom-color' target='blank'>View Github Code</Button>
+                  <Button href={project.link} className='btn-cutom-color' target='_blank' rel='noopener noreferrer'>View Github Code</Button>
                 </CardHeader>
                 <CardBody>
                   <CardTitle as="h4">{project.titleName}</CardTitle>
@@ -156,7 +156,7 @@ const Projects = () => {
               <Card>
                 <CardImg variant='top' src={liveProject.img} alt={liveProject.name}></CardImg>
                 <CardHeader className='text-center py-3'>
-                  <Button href={liveProject.url} className='btn-cutom-color' target='blank'>View Website</Button>
+                  <Button href={liveProject.url} className='btn-cutom-color' target='_blank' rel='noopener noreferrer'>View Website</Button>
                 </CardHeader>
                 <CardBody>
                   <CardTitle as="h4">{liveProject.name}</CardTitle>

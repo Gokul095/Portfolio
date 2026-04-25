@@ -15,7 +15,6 @@ const Contact = () => {
     message: yup.string().required('Message is required'),
   });
 
-  const [validated, setValidated] = useState(false);
   const [formStatus, setFormStatus] = useState(null);
 
   // const formValidated = (event) => {
@@ -32,20 +31,15 @@ const Contact = () => {
   // const baseUrl = 'http://localhost:8000';
   const baseUrl = 'https://portfolio-v8e5.onrender.com';
 
-  const sendEmail = async (values) => { 
+  const sendEmail = async (values) => {
     setFormStatus('pending');
-
-    await axios.post(`${baseUrl}/sendEmail`, values)
-    .then( (res) => {
-      console.log(res);
-      if (res.status === 200) {
-        setFormStatus('success');
-      } else {
-        setFormStatus('failure');
-      }
-    }).catch((err) => {
-      console.log(err)
-    })
+    try {
+      const res = await axios.post(`${baseUrl}/sendEmail`, values);
+      setFormStatus(res.status === 200 ? 'success' : 'failure');
+    } catch (err) {
+      console.error(err);
+      setFormStatus('failure');
+    }
   };
 
 
@@ -78,7 +72,7 @@ const Contact = () => {
               }}
             >
              {({ handleSubmit, handleChange, values, touched, errors }) => (
-              <Form noValidate validated={touched && validated}  onSubmit={handleSubmit}>
+              <Form noValidate onSubmit={handleSubmit}>
                 <Row className='mb-3'>
                 <Form.Group as={Col} controlId='formGridName'>
                   <Form.Label>Name</Form.Label>

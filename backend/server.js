@@ -12,19 +12,16 @@ const corsOptions = {
     optionSuccessStatus: 200,
 };
 
-app.use(cors()); // Use this after the variable declaration
+app.use(cors(corsOptions)); // Apply CORS with options
 
 app.use(express.json()); // tell the server to accept the json data from frontend
 
 //Signup and login
 app.use("/", emailRoutes);
 
-app.get("/", (req, res) => {
-    res.send();
-});
 
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
     console.log(`Example app listening on port ${PORT}`);
 });

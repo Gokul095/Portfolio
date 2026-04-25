@@ -43,12 +43,12 @@ const About = () => {
               </CardHeader>
               <CardBody>
                 <CardText as="p">
-                  Frontend Developer with 2+ years of experience building scalable,
-                  responsive, and user-centric web applications. Strong expertise in
-                  React.js, Angular, TypeScript, and modern UI architectures.
-                  Experienced in ERP systems, multi-role dashboards, REST API
-                  integration, and performance optimization. Focused on clean
-                  code, modular architecture, and seamless user experience.
+                  Results-driven Frontend Developer with 3+ years of experience building
+                  scalable, responsive, and high-performance web applications using React.js,
+                  Angular, TypeScript, and JavaScript. Strong expertise in reusable component
+                  architecture, REST API integration, state management, role-based dashboards,
+                  and UI optimization. Proven success delivering enterprise SaaS, admin panels,
+                  eCommerce platforms, and business-critical features in Agile environments.
                 </CardText>
                 <CardText as="h2">Personal Info</CardText>
                 <Container>
@@ -91,7 +91,8 @@ const About = () => {
                               action
                               href="https://www.linkedin.com/in/gokul-saran-2ab6a4247"
                               className="border-none"
-                              target="blank"
+                              target="_blank"
+                              rel="noopener noreferrer"
                             >
                               <FiLinkedin />
                             </ListGroupItem>
@@ -99,7 +100,8 @@ const About = () => {
                               action
                               href="https://github.com/Gokul095"
                               className="border-none"
-                              target="blank"
+                              target="_blank"
+                              rel="noopener noreferrer"
                             >
                               <FiGithub />
                             </ListGroupItem>
@@ -129,20 +131,21 @@ const About = () => {
             <Col xs={12} md={6} className="py-3">
               <Card>
                 <CardBody className="exp-body">
-                  <CardTitle as="h4">Frontend Developer</CardTitle>
+                  <CardTitle as="h4">Software Developer</CardTitle>
                   <CardText as="p" className="mb-1">
                     MyFluiditi, Chennai
                   </CardText>
-                  <CardText as="p">Apr 2024 - Present</CardText>
+                  <CardText as="p">Apr 2024 – Apr 2026</CardText>
 
-                  <CardTitle>Roles & Responsibilities</CardTitle>
-                  <CardBody as="ul">
-                    <CardText as="li">Developed scalable and reusable UI components using React.js, Angular, and TypeScript.</CardText>
-                    <CardText as="li">Converted complex Figma designs into production-ready, fully responsive interfaces.</CardText>
-                    <CardText as="li">Integrated REST APIs for products, vendors, services, and order workflows.</CardText>
-                    <CardText as="li">Built modular dashboards and multi-role access systems.</CardText>
-                    <CardText as="li">Improved application performance and optimized component structure for reusability.</CardText>
-                  </CardBody>
+                  <CardTitle>Roles &amp; Responsibilities</CardTitle>
+                  <ul className="exp-body">
+                    <li>Developed reusable React.js and Angular components, improving delivery speed by <strong>30%</strong>.</li>
+                    <li>Built responsive UI screens from Figma designs using TypeScript, Tailwind CSS, and SCSS.</li>
+                    <li>Integrated 10+ REST APIs for products, orders, users, and vendor modules.</li>
+                    <li>Implemented role-based dashboards for Super Admin, Admin, Partner, and User access.</li>
+                    <li>Improved application performance by <strong>35%</strong> using lazy loading and code splitting.</li>
+                    <li>Collaborated with QA, backend, and product teams in Agile sprint cycles.</li>
+                  </ul>
                 </CardBody>
               </Card>
             </Col>
@@ -153,31 +156,15 @@ const About = () => {
                   <CardText as="p" className="mb-1">
                     Profivi Technologies, Chennai
                   </CardText>
-                  <CardText as="p">Nov 2022 - Nov 2023</CardText>
+                  <CardText as="p">Nov 2022 – Nov 2023</CardText>
 
-                  <CardTitle>Roles & Responsibilities</CardTitle>
-                  <CardBody as="ul">
-                    <CardText as="li">Developed responsive websites using HTML, CSS, JavaScript & Bootstrap.</CardText>
-                    <CardText as="li">Customized WordPress and WooCommerce websites using Elementor & Divi.</CardText>
-                    <CardText as="li">Improved website performance, SEO, and overall user experience.</CardText>
-                  </CardBody>
-                </CardBody>
-              </Card>
-            </Col>
-            <Col xs={12} md={6} className="py-3">
-              <Card>
-                <CardBody className="exp-body">
-                  <CardTitle as="h4">Freelance Web Developer</CardTitle>
-                  <CardText as="p" className="mb-1">
-                    Remote
-                  </CardText>
-                  <CardText as="p">Dec 2023 - Present</CardText>
-
-                  <CardTitle>Roles & Responsibilities</CardTitle>
-                  <CardBody as="ul">
-                    <CardText as="li">Developed WordPress and WooCommerce e-commerce websites with Razorpay integration.</CardText>
-                    <CardText as="li">Managed hosting, deployment, maintenance, and client support.</CardText>
-                  </CardBody>
+                  <CardTitle>Roles &amp; Responsibilities</CardTitle>
+                  <ul className="exp-body">
+                    <li>Developed 10+ responsive business websites using HTML5, CSS3, JavaScript, and Bootstrap.</li>
+                    <li>Built WooCommerce eCommerce stores with checkout and payment gateway integrations.</li>
+                    <li>Improved SEO, speed, and accessibility through frontend optimization.</li>
+                    <li>Delivered mobile-first and cross-browser compatible UI experiences.</li>
+                  </ul>
                 </CardBody>
               </Card>
             </Col>
@@ -190,11 +177,21 @@ const About = () => {
                 </CardHeader>
                 <CardBody className="exp-body">
                   <div className="mb-4">
-                    <CardTitle as="h6">2019 - 2022</CardTitle>
-                    <CardTitle as="h6">B.Com (Commerce)</CardTitle>
+                    <CardTitle as="h6">2019 – 2022 | B.Com (Corporate Secretaryship)</CardTitle>
                     <CardTitle as="h6">
-                      St. Thomas College of Arts & Science, Chennai
+                      St. Thomas College of Arts &amp; Science, Chennai
                     </CardTitle>
+                    <CardText style={{fontSize: '13px'}} className="fst-italic">
+                      Career transitioned to software development in 2022 through self-directed learning and professional practice.
+                    </CardText>
+                  </div>
+                  <div className="mb-4">
+                    <CardTitle as="h6">2018 – 2019 | HSC</CardTitle>
+                    <CardTitle as="h6">Holy Infant Jesus Matriculation Hr. Sec School, Chennai</CardTitle>
+                  </div>
+                  <div>
+                    <CardTitle as="h6">2016 – 2017 | SSLC</CardTitle>
+                    <CardTitle as="h6">Holy Infant Jesus Matriculation Hr. Sec School, Chennai</CardTitle>
                   </div>
                 </CardBody>
               </Card>
