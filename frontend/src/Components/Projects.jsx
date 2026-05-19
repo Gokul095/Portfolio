@@ -27,9 +27,9 @@ const Projects = () => {
       img: defaultImg,
       link: '#',
       titleName: "YANGOZO — On-Demand Service Platform",
-      content: "Developed a multi-role on-demand service platform with Admin, Customer, Vendor, and Service Provider dashboards. Implemented NgRx state management and reusable shared modules. Integrated Razorpay payment gateway for UPI, cards, and wallet payments. Built booking flow, order management, and role-based navigation systems.",
+      content: "Developed Admin, Customer, Vendor, and Service Provider dashboards using Angular, TypeScript, and responsive UI architecture. Implemented NgRx state management, REST API integration, and role-based access control (RBAC) for scalable frontend workflows. Integrated Razorpay payment gateway supporting UPI, cards, and wallet transactions. Built food ordering and service booking modules where users can select nearby restaurants, add items to cart, and place orders through secure checkout workflows. Developed reusable shared components, optimized application performance, and ensured mobile-first and cross-browser compatible UI experience.",
       programs: {
-        frontend: "Angular, NgRx, SCSS",
+        frontend: "Angular, TypeScript, NgRx, SCSS",
         api: "REST API Integration, Razorpay",
       },
     },

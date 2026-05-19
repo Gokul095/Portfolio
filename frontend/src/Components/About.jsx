@@ -43,12 +43,7 @@ const About = () => {
               </CardHeader>
               <CardBody>
                 <CardText as="p">
-                  Results-driven Frontend Developer with 3+ years of experience building
-                  scalable, responsive, and high-performance web applications using React.js,
-                  Angular, TypeScript, and JavaScript. Strong expertise in reusable component
-                  architecture, REST API integration, state management, role-based dashboards,
-                  and UI optimization. Proven success delivering enterprise SaaS, admin panels,
-                  eCommerce platforms, and business-critical features in Agile environments.
+                  Frontend Developer with 3+ years of experience building responsive, scalable, and high-performance web applications using React.js, Angular, TypeScript, JavaScript (ES6+), HTML5, CSS3, and Tailwind CSS. Skilled in reusable component architecture, REST API integration, state management, role-based dashboards, and frontend performance optimization. Experienced in developing enterprise applications, admin panels, eCommerce platforms, and modern UI solutions in Agile environments.
                 </CardText>
                 <CardText as="h2">Personal Info</CardText>
                 <Container>
@@ -139,12 +134,12 @@ const About = () => {
 
                   <CardTitle>Roles &amp; Responsibilities</CardTitle>
                   <ul className="exp-body">
-                    <li>Developed reusable React.js and Angular components, improving delivery speed by <strong>30%</strong>.</li>
-                    <li>Built responsive UI screens from Figma designs using TypeScript, Tailwind CSS, and SCSS.</li>
-                    <li>Integrated 10+ REST APIs for products, orders, users, and vendor modules.</li>
-                    <li>Implemented role-based dashboards for Super Admin, Admin, Partner, and User access.</li>
-                    <li>Improved application performance by <strong>35%</strong> using lazy loading and code splitting.</li>
-                    <li>Collaborated with QA, backend, and product teams in Agile sprint cycles.</li>
+                    <li>Developed scalable frontend applications using React.js, Angular, TypeScript, and Tailwind CSS</li>
+                    <li>Built responsive and reusable UI components from Figma designs with mobile-first architecture</li>
+                    <li>Integrated REST APIs for authentication, products, orders, dashboards, and user management modules</li>
+                    <li>Implemented role-based access control (RBAC) dashboards for Admin, Partner, Vendor, and User systems</li>
+                    <li>Optimized application performance using lazy loading, code splitting, and reusable component architecture</li>
+                    <li>Collaborated with backend, QA, and product teams in Agile sprint environments to deliver production-ready features</li>
                   </ul>
                 </CardBody>
               </Card>
@@ -160,10 +155,9 @@ const About = () => {
 
                   <CardTitle>Roles &amp; Responsibilities</CardTitle>
                   <ul className="exp-body">
-                    <li>Developed 10+ responsive business websites using HTML5, CSS3, JavaScript, and Bootstrap.</li>
-                    <li>Built WooCommerce eCommerce stores with checkout and payment gateway integrations.</li>
-                    <li>Improved SEO, speed, and accessibility through frontend optimization.</li>
-                    <li>Delivered mobile-first and cross-browser compatible UI experiences.</li>
+                    <li>Developed responsive business and eCommerce websites using HTML5, CSS3, JavaScript, Bootstrap, React.js, Angular, and WordPress</li>
+                    <li>Built WooCommerce stores with payment gateway integrations, while improving SEO, accessibility, and frontend performance for better user experience</li>
+                    <li>Designed mobile-first, cross-browser compatible UI layouts and collaborated with clients and internal teams to deliver customized web solutions</li>
                   </ul>
                 </CardBody>
               </Card>
